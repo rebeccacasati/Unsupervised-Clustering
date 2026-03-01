@@ -1,6 +1,71 @@
-# Unsupervised-Clustering
-This code was developed by the authors as a project for the Unsupervised Learning Exam of the Master's Degree in Artificial Intelligence for Science and Technology.
+# Unsupervised Clustering
 
-The aim of this project is to cluster the Diabetes dataset using three target variables: Diabetes, Hypertension and Stroke. Since the data are of mixed-types, the solution that has been found to deal with them was to compute the distance matrix with Gower's distance, which will be used as metric in the following analysis. No dimensionality reduction was performed because it was found that the FAMD and UMAP methods were ineffective. Anomaly detection was performed via the k-Nearest Neighbor algorithm, which allowed to identify approximately 2.000 outliers. Clustering was performed using three methods: Hierarchical, Density-Based (DBSCAN) and k-Prototypes. With some hyper-parameter tuning, it was found that the best solutions were those given by Ward's method for the Hierarchical and the k-Prototypes, both with three clusters. Lastly, some unsupervised (Silhouette coefficient and Dunn index) and supervised measures (Rand score, ARI and Fowlkes and Mallows index) were computed in order to evaluate the clustering solutions found, which showed that none of them were good clustering or at least meaningful.
+This repository contains the code and final report for an exam project developed for the Unsupervised Learning course in the Master's Degree in Artificial Intelligence for Science and Technology.
 
-This repository contains the code (The_Diabetes_Dataset_Project_Unsupervised_CASATI_DENTI.ipynb) and the Final Report of the project (The_Diabetes_Dataset_Project_Unsupervised_CASATI_DENTI.pdf), in which the results and the methods have been commented in detail.
+## Project Overview
+
+The goal of the project is to cluster a diabetes dataset using three target variables:
+
+- Diabetes
+- Hypertension
+- Stroke
+
+Because the dataset contains mixed-type features, the analysis uses Gower's distance to build the distance matrix used throughout the clustering workflow.
+
+The project also explores dimensionality reduction methods, but no dimensionality reduction was applied in the final analysis because FAMD and UMAP were found to be ineffective for this dataset.
+
+Anomaly detection was performed with the k-Nearest Neighbor algorithm, identifying approximately 2,000 outliers.
+
+Clustering was then carried out with three different methods:
+
+- Hierarchical clustering
+- Density-based clustering (DBSCAN)
+- k-Prototypes
+
+After hyperparameter tuning, the best-performing solutions were:
+
+- Hierarchical clustering with Ward's method
+- k-Prototypes
+
+Both of these solutions produced three clusters.
+
+The clustering quality was evaluated with both unsupervised and supervised metrics, including:
+
+- Silhouette coefficient
+- Dunn index
+- Rand score
+- Adjusted Rand Index (ARI)
+- Fowlkes-Mallows index
+
+The final conclusion of the project is that none of the tested clustering solutions produced strong or clearly meaningful cluster structures on this dataset.
+
+## Repository Contents
+
+- `The_Diabetes_Dataset_Project_Unsupervised_CASATI_DENTI.ipynb`: Jupyter notebook containing the full analysis
+- `The_Diabetes_Dataset_Project_Unsupervised_CASATI_DENTI.pdf`: final report with detailed discussion of methods and results
+
+## Running the Notebook
+
+The notebook is designed to download the dataset directly and then execute the analysis pipeline.
+
+It uses Python packages such as:
+
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `scikit-learn`
+- `scipy`
+- `prince`
+- `umap-learn`
+- `gower`
+- `kneed`
+- `kmodes`
+- `gdown`
+
+Some of these dependencies are installed directly inside the notebook with `pip`.
+
+## Authors
+
+- Rebecca Casati
+- Giulia Denti
